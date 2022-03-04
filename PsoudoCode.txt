@@ -1,0 +1,23 @@
+[X] create an arena background
+
+[X] create the hands assets
+
+[X] center the section with the arena background
+
+[X] put a header of the game
+
+[] cratte a button to initiate the game
+
+[] show the hands to chose from on the left of the section (ul? section? flex?)
+
+[] show a timer on the center of the arena (10 seconds)
+
+[] show the hands of the computer hidden
+
+[] when the player selects a hand, pass the respective value to a variable
+
+[] random pick a hand for the computer 
+
+[] compare the hands  and  show who won
+
+[] reinitilize the game

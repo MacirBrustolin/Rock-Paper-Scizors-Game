@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>Title in the tab</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Rock, Paper and Scissors Game!</h1>
+			
+		</header>
+		<main>
+			<section id="" class="begin">
+				<button id="begin-button" class="" type="button">Begin</button>
+			</section>
+				<section class="section hidden">
+					<section>
+						<img class="player-hand paper" src="assets/PaperAsset.svg" alt="Paper Hand">
+					</section>
+					<section>
+						<img class="player-hand rock" src="assets/RockAsset.svg" alt="Rock Hand">
+					</section>
+					<section>
+						<img class="player-hand scissor" src="assets/ScissorAsset.svg" alt="Scissor Hand">
+					</section>
+				</section>
+				<section id="" class="section hidden result">
+					<h2 class="timer hidden">Chose your Hand: <span id="countdown">5</span> sec.</h2>
+					<p id="write-result" class="hidden"></p>
+					<button id="reset-button" class="hidden" type="button">Reset</button>
+				</section>
+				<section class="section hidden flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h1>CPU Hand</h1>
+						</div>
+						<div class="flip-card-back">
+						  <img class="cpu-hand" src="assets/ScissorAsset.svg" alt="Scissor Hand">
+						</div>
+					  </div>
+				</section>
+				
+		</main>
+		<footer>
+
+		</footer>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

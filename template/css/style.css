@@ -1,0 +1,190 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  text-align: center;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 90vh;
+  background-image: url('../assets/PokemonArena.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+header {
+  min-height: 10%;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1em 0;
+}
+
+main {
+  width: 75%;
+  height: 75%;
+  display: flex;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 33.3333%;
+  /* background: grey; */
+}
+
+main > section > section {
+  flex: 100%;
+}
+
+section > h1 {
+  font-size: 3rem;
+}
+
+.player-hand {
+  border:solid 0.2em black;
+  border-radius: 2rem;
+  height: 8.5em;
+  width: 8.5em;
+  background: rgb(98, 211, 98);
+}
+
+img.selected{
+   box-shadow:0px 12px 22px 1px rgb(17, 17, 17);
+}
+
+.player-hand:hover {
+  background: rgb(89, 175, 89);
+}
+
+.cpu-hand{
+  height: 15em;
+  width: 15em;
+}
+
+.begin {
+  display: flex;
+  flex: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#begin-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 5rem;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+#write-result{
+  font-weight: bolder;
+  font-size: 3em;
+}
+
+#reset-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  margin: 3em;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
+.flip-card-inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  border: 0.2rem solid black;
+  border-radius: 2rem;
+  height: 15em;
+  width: 15em;
+  margin: 33.3333% 25%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-card-front {
+  background: rgb(45, 99, 45);
+  color: white;
+}
+
+.flip-card-front > h1{
+  margin: 20%;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background: rgb(98, 211, 98);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.hidden{
+	display: none;
+}
