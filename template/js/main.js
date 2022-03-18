@@ -151,6 +151,7 @@ function Reset(){
     cpuCount = 0
     playerCount = 0
 
+    document.getElementById("write-score").innerHTML = `Player: ${playerCount} vs CPU: ${cpuCount}`
     document.querySelector('.rock').classList.remove('selected');
     document.querySelector('.scissor').classList.remove('selected');
     document.querySelector('.paper').classList.remove('selected');
