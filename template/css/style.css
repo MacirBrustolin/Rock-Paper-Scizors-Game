@@ -36,7 +36,7 @@ header {
 
 main {
   width: 75%;
-  height: 75%;
+  height: 60%;
   display: flex;
   position: absolute;
   top: 57%;
@@ -110,16 +110,38 @@ img.selected{
   font-size: 2em;
 }
 
+#write-welcome{
+  font-weight: bolder;
+  font-size: 3em;
+  margin: 2.5em;
+}
+
 #write-result{
   font-weight: bolder;
   font-size: 3em;
+}
+
+#write-score{
+  font-weight: bolder;
+  font-size: 1.5em;
 }
 
 #reset-button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  margin: 3em;
+  margin: 2em;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
+#again-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  margin-top: 2em;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;

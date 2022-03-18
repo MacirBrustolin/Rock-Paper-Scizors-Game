@@ -3,18 +3,22 @@ const beginButton = document.querySelector('#begin-button')
 const sections = document.querySelectorAll('.section')
 const timer = document.querySelector('.timer')
 const reset = document.querySelector('#reset-button')
+const again = document.querySelector('#again-button')
 const writeResult = document.querySelector('#write-result')
+const writeScore = document.querySelector('#write-score')
 
 let playerHand = 0;
 let cpuHand;
 let max_time = 5;
 let cinterval;
+let cpuCount = 0, playerCount = 0
 
 document.querySelector('.begin').addEventListener('click', Begin)
 document.querySelector('.paper').addEventListener('click', PaperHand)
 document.querySelector('.rock').addEventListener('click', RockHand)
 document.querySelector('.scissor').addEventListener('click', ScissorHand)
 document.querySelector('#reset-button').addEventListener('click', Reset)
+document.querySelector('#again-button').addEventListener('click', Again)
 
 
 function Begin(){
@@ -28,6 +32,27 @@ function Begin(){
     cinterval = setInterval('countdown_timer()', 1000);
     setTimeout(() => {CPUHand(), FinalResult()}, 5000);
 
+}
+
+function Again(){
+    max_time = 5;
+    playerHand = 0;
+
+    document.querySelector('.flip-card-inner').style.transform = 'rotateY(0deg)'
+
+    reset.classList.toggle('hidden')
+    again.classList.toggle('hidden')
+    writeResult.classList.toggle('hidden')
+    writeScore.classList.toggle('hidden')
+    timer.classList.toggle('hidden')
+
+    document.querySelector('.rock').classList.remove('selected');
+    document.querySelector('.scissor').classList.remove('selected');
+    document.querySelector('.paper').classList.remove('selected');
+
+    document.getElementById('countdown').innerHTML = max_time;
+    cinterval = setInterval('countdown_timer()', 1000);
+    setTimeout(() => {CPUHand(), FinalResult()}, 5000);
 }
 
 function countdown_timer(){
@@ -79,29 +104,43 @@ function FinalResult(){
         document.getElementById("write-result").innerHTML = "Its a Draw!";
     }
     else if (playerHand == 1 && cpuHand == 2){
+        playerCount++
         document.getElementById("write-result").innerHTML = "Player Wins!!";
+        document.getElementById("write-score").innerHTML = `Player: ${playerCount} vs CPU: ${cpuCount}`
     }
     else if (playerHand == 1 && cpuHand == 3){
+        cpuCount++
         document.getElementById("write-result").innerHTML = "CPU Wins!!";
+        document.getElementById("write-score").innerHTML = `Player: ${playerCount} vs CPU: ${cpuCount}`
     }
     else if (playerHand == 2 && cpuHand == 1){
+        cpuCount++
         document.getElementById("write-result").innerHTML = "CPU Wins!!";
+        document.getElementById("write-score").innerHTML = `Player: ${playerCount} vs CPU: ${cpuCount}`
     }
     else if (playerHand == 2 && cpuHand == 3){
+        playerCount++
         document.getElementById("write-result").innerHTML = "Player Wins!!";
+        document.getElementById("write-score").innerHTML = `Player: ${playerCount} vs CPU: ${cpuCount}`
     }
     else if (playerHand == 3 && cpuHand == 1){
+        playerCount++
         document.getElementById("write-result").innerHTML = "Player Wins!!";
+        document.getElementById("write-score").innerHTML = `Player: ${playerCount} vs CPU: ${cpuCount}`
     }
     else if (playerHand == 3 && cpuHand == 2){
+        cpuCount++
         document.getElementById("write-result").innerHTML = "CPU Wins!!";
+        document.getElementById("write-score").innerHTML = `Player: ${playerCount} vs CPU: ${cpuCount}`
     }
     else {
         document.getElementById("write-result").innerHTML = "Too Slow. You did't choose a hand :(";
     }
     timer.classList.toggle('hidden')
     reset.classList.toggle('hidden')
+    again.classList.toggle('hidden')
     writeResult.classList.toggle('hidden')
+    writeScore.classList.toggle('hidden')
     document.querySelector('.flip-card-inner').style.transform = 'rotateY(180deg)'
     
 }
@@ -109,6 +148,8 @@ function FinalResult(){
 function Reset(){
     max_time = 5;
     playerHand = 0;
+    cpuCount = 0
+    playerCount = 0
 
     document.querySelector('.rock').classList.remove('selected');
     document.querySelector('.scissor').classList.remove('selected');
@@ -119,5 +160,7 @@ function Reset(){
 	begin.classList.toggle('hidden')
     beginButton.classList.toggle('hidden')
     reset.classList.toggle('hidden')
+    again.classList.toggle('hidden')
     writeResult.classList.toggle('hidden')
+    writeScore.classList.toggle('hidden')
 }
