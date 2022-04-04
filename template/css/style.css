@@ -29,14 +29,20 @@ body {
 
 header {
   min-height: 10%;
-  font-size: 3rem;
+  font-size: 1.5em;
   text-align: center;
   margin: 1em 0;
 }
 
+header > h1 {
+  font-size: 3em;
+  color: black;
+  background: #419146;
+}
+
 main {
+  height: 50%;
   width: 75%;
-  height: 60%;
   display: flex;
   position: absolute;
   top: 57%;
@@ -51,6 +57,7 @@ main > section {
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 33.3333%;
   flex: 33.3333%;
   /* background: grey; */
 }
@@ -60,12 +67,12 @@ main > section > section {
 }
 
 section > h1 {
-  font-size: 3rem;
+  font-size: 1.5em;
 }
 
 .player-hand {
   border:solid 0.2em black;
-  border-radius: 2rem;
+  border-radius: 2em;
   height: 8.5em;
   width: 8.5em;
   background: rgb(98, 211, 98);
@@ -80,8 +87,8 @@ img.selected{
 }
 
 .cpu-hand{
-  height: 15em;
-  width: 15em;
+  height: 10em;
+  width: 10em;
 }
 
 .begin {
@@ -98,7 +105,10 @@ img.selected{
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 5rem;
+  font-size: 3em;
+}
+#begin-button:hover{
+  background-color: #419146;
 }
 
 .result {
@@ -111,6 +121,7 @@ img.selected{
 }
 
 #write-welcome{
+  background: rgba(65, 145, 70, 0.7);
   font-weight: bolder;
   font-size: 3em;
   margin: 2.5em;
@@ -118,7 +129,7 @@ img.selected{
 
 #write-result{
   font-weight: bolder;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 #write-score{
@@ -134,7 +145,11 @@ img.selected{
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 2.5rem;
+  font-size: 1em;
+}
+
+#reset-button:hover{
+  background-color: #419146;
 }
 
 #again-button {
@@ -145,7 +160,11 @@ img.selected{
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 2.5rem;
+  font-size: 1em;
+}
+
+#again-button:hover{
+  background-color: #419146;
 }
 
 .flip-card-inner{
@@ -178,9 +197,9 @@ img.selected{
 .flip-card-front, .flip-card-back {
   position: absolute;
   border: 0.2rem solid black;
-  border-radius: 2rem;
-  height: 15em;
-  width: 15em;
+  border-radius: 2em;
+  height: 10em;
+  width: 10em;
   margin: 33.3333% 25%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
@@ -188,7 +207,7 @@ img.selected{
 
 /* Style the front side */
 .flip-card-front {
-  background: rgb(45, 99, 45);
+  background: #419146;
   color: white;
 }
 
