@@ -4,4 +4,6 @@ Just having fun with HTML, CSS and JS.
 
 still some things to fix.
 
-https://rock-paper-scissor-macir.netlify.app/
+https://macirbrustolin.github.io/Rock-Paper-Scizors-Game/index.html
+or 
+https://rock-paper-scissor-macir.netlify.app/ (outdated)
